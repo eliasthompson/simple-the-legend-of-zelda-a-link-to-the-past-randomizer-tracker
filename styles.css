@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'November';
   font-weight: 400;
-  src: url('../fonts/November-Regular.ttf') format('truetype');
+  src: url('./fonts/November-Regular.ttf') format('truetype');
 }
 
 * {
