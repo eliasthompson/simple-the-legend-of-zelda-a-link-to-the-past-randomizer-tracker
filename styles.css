@@ -12,8 +12,9 @@
 
 body {
   position: relative;
-	width: 224px;
-	height: 224px;
+	width: 100%;
+	/* width: 466px; */
+	/* height: 466px; */
 	display: flex;
 	flex-direction: column;
   align-items: center;
@@ -26,7 +27,7 @@ body {
 
 img {
   image-rendering: pixelated;
-  height: 24px;
+  height: 42px;
 }
 
 #info {
@@ -34,7 +35,9 @@ img {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  box-sizing: border-box;
   width: 100%;
+  padding: 2px;
 }
 
 #timer {
@@ -49,6 +52,7 @@ img {
   font-size: 24px;
   /* -webkit-text-stroke: 4px #000000; */
   paint-order: stroke fill;
+  display: none;
 }
 
 #timer > div:not(.overlay) {
@@ -70,14 +74,16 @@ img {
   display: flex;
   flex-wrap: wrap;
 	justify-content: space-around;
+  box-sizing: border-box;
   width: 100%;
+  padding: 2px;
 }
 
 .item {
-  margin: 4px;
+  margin: 2px;
 }
 
-.item:not(.auto):not(.counted) {
+.item:not(.auto) {
 	cursor: pointer;
 }
 
@@ -103,4 +109,9 @@ img {
 
 .grayscale {
   filter: brightness(50%) grayscale(100%);
+}
+
+#heartpiece,
+#heartcontainer {
+  display: none;
 }
