@@ -84,17 +84,12 @@ function toggle_item(e, misc) {
     if (!parent.classList.contains('counted')) {
       items.classList.toggle('grayscale');
     } else {
-      console.log('clack');
       var counted = e.currentTarget.classList.contains('counted');
       var numbers = e.currentTarget.querySelector('.count');
 
       if (numbers) {
-        console.log(counted);
-        console.log(numbers);
         var shown = numbers.querySelector(':not(.hidden)');
         var next = shown.previousElementSibling;
-        console.log(shown);
-        console.log(next);
 
         if (next) {
           shown.classList.toggle('hidden');
@@ -103,11 +98,8 @@ function toggle_item(e, misc) {
           if (counted) {
             if (next.getAttribute('src')) e.currentTarget.querySelector('.items').classList.remove('grayscale');
             else e.currentTarget.querySelector('.items').classList.add('grayscale');
-
-            console.log(next.getAttribute('src'));
           }
         } else {
-          console.log(numbers.querySelector(':last-child'));
           shown.classList.toggle('hidden');
           numbers.lastElementChild.classList.toggle('hidden');
           e.currentTarget.querySelector('.items').classList.add('grayscale');
